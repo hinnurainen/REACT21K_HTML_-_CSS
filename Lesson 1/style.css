@@ -6,8 +6,6 @@ p {
   color: green;
 }
 
-/* tähän oma kommentti /*
-
 .blue {
   color: blue;
 }
@@ -20,16 +18,14 @@ p {
   color: yellow;
 }
 
-.blue {
-  color: purple;
-}
-
 #important {
   font-size: 40px;
   color: red;
 }
 
-.circle {background-color: brown;
-height:200px;
-width:200px;
+/* HERE'S MY OWN NOTES*/
+.square {
+  background-color: brown;
+  height: 200px;
+  width: 200px;
 }
