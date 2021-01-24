@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(39, 11, 11);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 1600px;
+  background-color: rgb(39, 11, 11);
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+  margin: 10px;
+}
+
+header {
+  background-color: rgb(39, 11, 11);
+  text-align: center;
+}
+
+img {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#hero_banner {
+  background-color: rgb(39, 11, 11);
+  background-image: url("https://source.unsplash.com/35bE_njbG9E/1200x200");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  color: coral;
+  text-align: center;
+  width: 1200px;
+  height: 200px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#past {
+  background-color: lightsalmon;
+  color: rgb(39, 11, 11);
+  text-align: left;
+  width: 1200px;
+  height: 100px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#present {
+  background-color: rgb(39, 11, 11);
+  color: lightsalmon;
+  text-align: left;
+  width: 1200px;
+  height: 100px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#future {
+  background-color: lightsalmon;
+  color: rgb(39, 11, 11);
+  text-align: left;
+  width: 1200px;
+  height: 100px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: lightsalmon;
+}
+
+footer {
+  background-color: rgb(39, 11, 11);
+  color: white;
+  text-align: center;
+  height: 50px;
+}

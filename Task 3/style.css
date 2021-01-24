@@ -1,0 +1,12 @@
+body {
+  background-color: rgba(255, 160, 122, 0.548);
+  color: rgb(88, 64, 29);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  background: rgba(194, 119, 89, 0.548);
+  list-style-type: none;
+}

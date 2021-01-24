@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightcoral;
+  background-image: url("https://source.unsplash.com/yDAT2YMc85Q/1600x900");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  color: #333333;
+  text-align: center;
+}
+
+h1 {
+  color: pink;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  color: lavender;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  background-color: lawngreen;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #333333;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  padding: 20px;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  margin: 20px;
+}
+
+.box1 {
+  background-color: green;
+  border: 10px solid yellow;
+  padding: 100px 50px;
+}
+
+.box2 {
+  background-color: purple;
+  border: 10px solid black;
+}
+
+.box3 {
+  background-color: orange;
+  border: 50px groove pink;
+  border-top: pink;
+  border-bottom: rebeccapurple;
+  border-left: salmon;
+  border-right: lightcoral;
+}
+
+.box4 {
+  background-color: grey;
+  border: 10px solid black;
+  border-style: dotted;
+}
+
+.box5 {
+  background-color: pink;
+  border: 20px rgb(27, 25, 27);
+  border-radius: 50%;
+}
