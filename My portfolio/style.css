@@ -5,18 +5,19 @@
 }
 
 body {
-  background-color: rgb(39, 11, 11);
+  background-color: rgb(33, 19, 25);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-  color: white;
+  color: rgb(249, 244, 239);
   text-align: center;
+  font-family: "Oswald", sans-serif;
 }
 
 .container {
   max-width: 1600px;
-  background-color: rgb(39, 11, 11);
+  background-color: rgb(33, 19, 25);
   margin: 0 auto;
 }
 
@@ -38,8 +39,9 @@ li {
 }
 
 header {
-  background-color: rgb(39, 11, 11);
+  background-color: rgb(33, 19, 25);
   text-align: center;
+  font-family: "Indie Flower", cursive;
 }
 
 img {
@@ -48,13 +50,13 @@ img {
 }
 
 #hero_banner {
-  background-color: rgb(39, 11, 11);
-  background-image: url("https://source.unsplash.com/35bE_njbG9E/1200x200");
+  background-color: rgb(33, 19, 25);
+  background-image: url("https://source.unsplash.com/CH-ZZW8cbac/1200x200");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-  color: coral;
+  color: rgb(249, 244, 239);
   text-align: center;
   width: 1200px;
   height: 200px;
@@ -64,8 +66,8 @@ img {
 }
 
 #past {
-  background-color: lightsalmon;
-  color: rgb(39, 11, 11);
+  background-color: rgb (33, 19, 25);
+  color: rgb(255, 199, 158);
   text-align: left;
   width: 1200px;
   height: 100px;
@@ -75,8 +77,8 @@ img {
 }
 
 #present {
-  background-color: rgb(39, 11, 11);
-  color: lightsalmon;
+  background-color: rgb(33, 19, 25);
+  color: rgb(255, 199, 158);
   text-align: left;
   width: 1200px;
   height: 100px;
@@ -86,8 +88,8 @@ img {
 }
 
 #future {
-  background-color: lightsalmon;
-  color: rgb(39, 11, 11);
+  background-color: rgb(33, 19, 25);
+  color: rgb(255, 199, 158);
   text-align: left;
   width: 1200px;
   height: 100px;
@@ -98,24 +100,24 @@ img {
 
 h1,
 h2 {
-  color: white;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(249, 244, 239);
+  font-family: "Indie Flower", cursive;
 }
 
 /* unvisited link */
 a:link {
-  color: white;
+  color: rgb(249, 244, 239);
 }
 
 /* visited link */
 a:visited {
-  color: lightsalmon;
+  color: rgb(211, 155, 130);
 }
 
 footer {
-  background-color: rgb(39, 11, 11);
-  color: white;
+  background-color: rgb(255, 199, 158);
+  color: rgb(33, 19, 25);
   text-align: center;
-  height: 50px;
+  height: 20px;
+  font-family: "Indie Flower", cursive;
 }
