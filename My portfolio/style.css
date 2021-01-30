@@ -6,43 +6,150 @@
 
 body {
   background-color: rgb(33, 19, 25);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
   color: rgb(249, 244, 239);
-  text-align: center;
   font-family: "Oswald", sans-serif;
-}
-
-.container {
-  max-width: 1600px;
-  background-color: rgb(33, 19, 25);
-  margin: 0 auto;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
+img {
+  height: 200px;
 }
 
-ul {
-  list-style-type: none;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-li {
-  display: inline;
-  margin: 10px;
+h1 {
+  font-weight: 300;
 }
 
+h2 {
+  margin: 32px 0;
+}
+
+p {
+  margin: 16px 0;
+  line-height: 1.5;
+}
+
+/*********** Header area ************/
 header {
+  min-height: 1000px;
   background-color: rgb(33, 19, 25);
   text-align: center;
   font-family: "Indie Flower", cursive;
+  background: url("https://source.unsplash.com/CH-ZZW8cbac/") no-repeat fixed center center/cover;
 }
+
+header .container {
+  padding: 42px;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin-top: 32px;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 0 16px;
+}
+
+header a {
+  text-decoration: none;
+  color: rgb(249, 244, 239);
+}
+
+/* unvisited link */
+header a:link {
+  color: rgb(249, 244, 239);
+}
+
+/* visited link */
+header a:visited {
+  color: rgb(33, 19, 25);
+}
+
+/************ Main area ************/
+
+#hero_banner h2 {
+  font-size: 75px;
+  color: rgb(33, 19, 25);
+  text-align: center;
+  padding-top: 400px;
+  text-transform: uppercase;
+  font-family: "Indie Flower", cursive;
+}
+
+#past img,
+#present img,
+#future img {
+  float: left;
+  margin-right: 32px;
+}
+
+#past h2, #present h2, #future h2 {
+  font-family: "Indie Flower", cursive;
+}
+
+#present img {
+  float: right;
+  margin-left: 32px;
+}
+
+/********** Footer area *************/
+
+footer {
+  background-color: rgb(255, 199, 158);
+  text-align: center;
+  color: rgb(33, 19, 25);
+  font-size: 13px;
+  padding: 8px;
+  font-family: "Indie Flower", cursive;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-family: "Indie Flower", cursive;
+}
+
+.form-group input {
+  width: 20%;
+  padding: 10px;
+  border: 1px solid rgb(33, 19, 25);
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: "Oswald", sans-serif;
+}
+
+.form-group textarea {
+  width: 20%;
+  padding: 10px;
+  border: 1px solid rgb(33, 19, 25);
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+button {
+  background-color: rgb(33, 19, 25);
+  color:rgb(249, 244, 239);
+  border: none;
+  width: 8%;
+  height: 4%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: "Indie Flower", cursive;
+}
+
+/**** omat vanhat
 
 img {
   margin-right: 20px;
@@ -104,20 +211,4 @@ h2 {
   font-family: "Indie Flower", cursive;
 }
 
-/* unvisited link */
-a:link {
-  color: rgb(249, 244, 239);
-}
-
-/* visited link */
-a:visited {
-  color: rgb(211, 155, 130);
-}
-
-footer {
-  background-color: rgb(255, 199, 158);
-  color: rgb(33, 19, 25);
-  text-align: center;
-  height: 20px;
-  font-family: "Indie Flower", cursive;
-}
+ /**************************

@@ -1,0 +1,35 @@
+body,
+input,
+button,
+select,
+option {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #333;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+th {
+  background-color: coral;
+  color: white;
+}
+
+table {
+  margin: 20px;
+}
+.center {
+  text-align: center;
+  background: #ebebeb;
+}
+
+thead {
+  background-color: dimgray;
+  color: white;
+  text-transform: uppercase;
+}

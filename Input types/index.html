@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Input types</title>
+</head>
+<body>
+    <h2>Form elements</h2>
+    <table>
+        <thead>
+            <tr>
+                <td>Description</td>
+                <td>Input example</td>
+                <td>Notes</td>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>type "button"</td>
+            <td>
+                <input type="button" value="I am button">
+            </td>
+            <td>needs value attribute for button text</td>
+           
+        </tr>
+        <tr>
+            <td>type="checkbox"</td>
+            <td>
+                <input type="checkbox">Checkbox
+            </td>
+            <td>checkbox text comes after input tag</td>
+            
+        </tr>
+        <tr>
+            <td>type="color"</td>
+            <td><input type="color" value="#ff0000"></td>
+            <td>with value you can set default color. type="color" is not supported in IE11 adn earlier versions or Safari9.1 and earlier versions</td>               
+        </tr>
+        <tr>
+            <td>type="date"</td>
+            <td><input type="date"></td>
+            <td>type="date" is not supported in IE11 and earlier versions</td>
+        </tr>
+        <tr>
+            <td>type="email"</td>
+            <td><input type="email"></td>
+            <td>type="email" is not supported in IE9 and earlier</td>
+        </tr>
+        <td class="center" colspan="3"></td>
+        <tr>
+            <td>Select example:</td>
+            <td><select name="cars">
+                <option value="Volvo">Volvo</option>
+                <option value="Saa">Saab</option>
+                <option value="Fiat">Fiat</option>
+                <option value="Audi">Audi</option>
+            </select></td>
+            <td>select is wrapping options</td>
+        </tr>
+        <tr>
+            <td>Textarea:</td>
+            <td><textarea cols="30" rows="10">
+            </textarea></td>
+            <td>the size of a text area can be specified by the cols and rows attributes, or even better: through CSS height and width properties</td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>
