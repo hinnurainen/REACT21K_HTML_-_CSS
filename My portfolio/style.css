@@ -4,18 +4,24 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(33, 19, 25);
   color: rgb(249, 244, 239);
   font-family: "Oswald", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
+input,
+textarea,
+button {
+  font-family: "Indie Flower", cursive;
 }
 
 img {
-  height: 200px;
+  width: 200px;
 }
 
 .container {
@@ -28,35 +34,74 @@ h1 {
 }
 
 h2 {
-  margin: 32px 0;
+  margin: 2rem 0;
 }
 
 p {
-  margin: 16px 0;
+  margin: 1rem 0;
   line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(249, 244, 239);
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(249, 244, 239);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(255, 199, 158);
+}
+
+a:hover {
+  color: rgb(161, 92, 42);
+}
+
+.bg {
+  background-color: rgb(33, 19, 25);
 }
 
 /*********** Header area ************/
 header {
-  min-height: 1000px;
-  background-color: rgb(33, 19, 25);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
   text-align: center;
   font-family: "Indie Flower", cursive;
-  background: url("https://source.unsplash.com/CH-ZZW8cbac/") no-repeat fixed center center/cover;
+  background: url("https://source.unsplash.com/CH-ZZW8cbac/1600x900") no-repeat
+    fixed center center/cover;
+}
+
+#mobileButton {
+  display: none;
 }
 
 header .container {
-  padding: 42px;
+  padding: 2.5rem;
 }
+
+/*.main_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+*/
 
 header nav ul {
   list-style-type: none;
-  margin-top: 32px;
 }
 
 header nav ul li {
   display: inline-block;
-  padding: 0 16px;
+  padding: 0 1em;
 }
 
 header a {
@@ -64,151 +109,311 @@ header a {
   color: rgb(249, 244, 239);
 }
 
-/* unvisited link */
-header a:link {
-  color: rgb(249, 244, 239);
+#hero-banner {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-/* visited link */
-header a:visited {
-  color: rgb(33, 19, 25);
-}
-
-/************ Main area ************/
 
 #hero_banner h2 {
-  font-size: 75px;
+  font-size: 5rem;
   color: rgb(33, 19, 25);
   text-align: center;
-  padding-top: 400px;
   text-transform: uppercase;
   font-family: "Indie Flower", cursive;
 }
 
-#past img,
-#present img,
-#future img {
-  float: left;
-  margin-right: 32px;
+/*.coloroverlay::before {
+  width: 100%;
+  background: rgb(255, 199, 158);
+  opacity: 0.7;
+  position: absolute;
+}*/
+
+/************ Main area ************/
+#work,
+#experience,
+#skills {
+  padding: 50px;
+  min-height: 500px;
 }
 
-#past h2, #present h2, #future h2 {
+#work .work_boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+#work .box {
+  background-color: rgb(33, 19, 25);
+  width: 32%;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(161, 92, 42);
+}
+
+#work .box:hover {
+  box-shadow: 0 0 25px rgb(161, 92, 42);
+}
+
+#work .box h3 {
+  margin-bottom: 1rem;
+}
+
+#work .box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* unvisited link */
+.box a:link {
+  color: rgb(249, 244, 239);
   font-family: "Indie Flower", cursive;
+  text-decoration: none;
 }
 
-#present img {
+/* visited link */
+.box a:visited {
+  color: rgb(255, 199, 158);
+  font-family: "Indie Flower", cursive;
+  text-decoration: none;
+}
+
+#experience {
+  background-color: rgb(33, 19, 25);
+}
+
+#experience img {
   float: right;
-  margin-left: 32px;
+  margin-left: 2rem;
+}
+
+#skills .skills_boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+#skills .box {
+  background-color: rgb(33, 19, 25);
+  text-align: center;
+  width: 32%;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(161, 92, 42);
+}
+
+#skills .box:nth-child(odd) {
+  background-color: rgb(255, 199, 158);
+}
+
+#skills .box:hover {
+  box-shadow: 0 0 25px rgb(161, 92, 42);
+}
+
+i {
+  background-color: rgb(33, 19, 25);
+  color: rgb(161, 92, 42);
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+progress {
+  width: 60%;
+  height: 30%;
+}
+
+progress[value] {
+  color: rgb(161, 92, 42);
+} /* IE10 */
+progress::-webkit-progress-bar-value {
+  background: rgb(161, 92, 42);
+}
+progress::-webkit-progress-value {
+  background: rgb(161, 92, 42);
+}
+progress::-moz-progress-bar {
+  background: rgb(161, 92, 42);
 }
 
 /********** Footer area *************/
 
 footer {
+  background: url("https://source.unsplash.com/CH-ZZW8cbac/1600x900") no-repeat
+    fixed center center/cover;
   background-color: rgb(255, 199, 158);
   text-align: center;
   color: rgb(33, 19, 25);
-  font-size: 13px;
   padding: 8px;
   font-family: "Indie Flower", cursive;
 }
 
+footer .copyright {
+  margin-top: 2rem;
+  font-size: 12px;
+}
+
+#myBtn {
+  background-color: rgb(33, 19, 25);
+  color: rgb(249, 244, 239);
+  border-radius: 5px;
+  border: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 1rem;
+  font-size: 0.813em;
+  font-family: "Indie Flower", cursive;
+}
+
+#myBtn:hover {
+  background-color: rgb(161, 92, 42);
+}
+
+.material-icons {
+  font-size: 1rem;
+}
+
+/********** Form area *************/
+
+footer form {
+  margin: 0 auto;
+  width: 60%;
+}
+
 .form-group label {
   display: block;
-  font-size: 13px;
   text-align: center;
   margin-bottom: 5px;
   font-family: "Indie Flower", cursive;
 }
 
-.form-group input {
+.form-group input,
+.form-group textarea {
   width: 20%;
-  padding: 10px;
+  padding: 0.5rem 1rem;
   border: 1px solid rgb(33, 19, 25);
   border-radius: 5px;
-  font-size: 13px;
+  font-size: 1rem;
   font-family: "Oswald", sans-serif;
 }
 
-.form-group textarea {
-  width: 20%;
-  padding: 10px;
-  border: 1px solid rgb(33, 19, 25);
-  border-radius: 5px;
-  font-size: 13px;
-}
-
-button {
+footer form button {
   background-color: rgb(33, 19, 25);
-  color:rgb(249, 244, 239);
+  color: rgb(249, 244, 239);
   border: none;
   width: 8%;
   height: 4%;
-  padding: 10px;
+  padding: 0.625em;
   border-radius: 5px;
-  font-size: 13px;
+  font-size: 0.813em;
   font-family: "Indie Flower", cursive;
 }
 
-/**** omat vanhat
-
-img {
-  margin-right: 20px;
-  margin-left: 20px;
+footer form button:hover {
+  background-color: rgb(161, 92, 42);
 }
 
-#hero_banner {
-  background-color: rgb(33, 19, 25);
-  background-image: url("https://source.unsplash.com/CH-ZZW8cbac/1200x200");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  color: rgb(249, 244, 239);
-  text-align: center;
-  width: 1200px;
-  height: 200px;
-  display: inline-block;
-  margin: 0 auto;
-  padding: 20px;
+/**************** Tablet support ****************/
+
+@media (max-width: 899px) {
+  #experience {
+    display: block;
+  }
+  #experience img {
+    width: 100%;
+  }
+  footer form {
+    width: 80%;
+    text-align: left;
+  }
+  footer form .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  footer form .form-group input,
+  footer form .form-group textarea,
+  footer form button {
+    width: 100%;
+    width: 100%;
+    margin: 0;
+  }
 }
 
-#past {
-  background-color: rgb (33, 19, 25);
-  color: rgb(255, 199, 158);
-  text-align: left;
-  width: 1200px;
-  height: 100px;
-  display: inline-block;
-  margin: 0 auto;
-  padding: 20px;
-}
+/**************** Mobile support ****************/
+@media (max-width: 576px) {
+  #mobileButton {
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
+  .main_nav {
+    display: block;
+  }
 
-#present {
-  background-color: rgb(33, 19, 25);
-  color: rgb(255, 199, 158);
-  text-align: left;
-  width: 1200px;
-  height: 100px;
-  display: inline-block;
-  margin: 0 auto;
-  padding: 20px;
-}
+  .main_nav ul {
+    display: none;
+    margin-top: 1rem;
+  }
 
-#future {
-  background-color: rgb(33, 19, 25);
-  color: rgb(255, 199, 158);
-  text-align: left;
-  width: 1200px;
-  height: 100px;
-  display: inline-block;
-  margin: 0 auto;
-  padding: 20px;
-}
+  .main_nav ul li {
+    padding: 1rem;
+  }
 
-h1,
-h2 {
-  color: rgb(249, 244, 239);
-  font-family: "Indie Flower", cursive;
-}
+  .main_nav.responsive ul {
+    display: block;
+    background-color: rgb(33, 19, 25);
+    color: rgb(249, 244, 239);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 86px;
+  }
 
- /**************************
+  .main_nav.responsive ul li {
+    display: block;
+  }
+
+  .main_nav.responsive ul li a {
+    display: block;
+    padding: 1rem 2rem;
+  }
+
+  #hero-banner h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+  }
+  #work .box h3 {
+    margin-bottom: 11rem;
+  }
+
+  #work,
+  #experience,
+  #skills {
+    padding: 1rem;
+  }
+  #work .work_boxes {
+    display: block;
+  }
+  #work .box {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  #experience img {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+  #skills .skills_boxes {
+    display: block;
+  }
+  #skills .box {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  footer form .form-group {
+    display: block;
+  }
+}
