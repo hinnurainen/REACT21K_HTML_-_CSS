@@ -1,3 +1,12 @@
+:root {
+  --highlightfont: "Indie Flower", cursive;
+  --basicfont: "Oswald", sans-serif;
+  --darkbrown: rgb(33, 19, 25);
+  --creamwhite: rgb(249, 244, 239);
+  --cognacbrown: rgb(161, 92, 42);
+  --lightcoralish: rgb(255, 199, 158);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,15 +18,15 @@ html {
 }
 
 body {
-  background-color: rgb(33, 19, 25);
-  color: rgb(249, 244, 239);
-  font-family: "Oswald", sans-serif;
+  background-color: var(--darkbrown);
+  color: var(--creamwhite);
+  font-family: var(--basicfont);
 }
 
 input,
 textarea,
 button {
-  font-family: "Indie Flower", cursive;
+  font-family: var(--highlightfont);
 }
 
 img {
@@ -27,10 +36,6 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-h1 {
-  font-weight: 300;
 }
 
 h2 {
@@ -44,56 +49,64 @@ p {
 
 a {
   text-decoration: none;
-  color: rgb(249, 244, 239);
+  color: var(--creamwhite);
 }
 
 /* unvisited link */
 a:link {
-  color: rgb(249, 244, 239);
+  color: var(--creamwhite);
 }
 
 /* visited link */
 a:visited {
-  color: rgb(255, 199, 158);
+  color: var(--lightcoralish);
 }
 
 a:hover {
-  color: rgb(161, 92, 42);
+  color: var(--cognacbrown);
+}
+
+#logo {
+  font-size: 2rem;
+  color: var(--creamwhite);
+}
+
+i {
+  font-size: 3rem;
 }
 
 .bg {
-  background-color: rgb(33, 19, 25);
+  background-color: var(--darkbrown);
 }
 
 /*********** Header area ************/
 header {
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background: url("https://source.unsplash.com/CH-ZZW8cbac/1600x900") no-repeat
+    fixed center center/cover;
+}
+
+.main_nav {
   position: fixed;
   top: 0;
   width: 100%;
-  text-align: center;
-  font-family: "Indie Flower", cursive;
-  background: url("https://source.unsplash.com/CH-ZZW8cbac/1600x900") no-repeat
-    fixed center center/cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--highlightfont);
+}
+
+.main_nav .container {
+  position: relative;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #mobileButton {
   display: none;
 }
-
-header .container {
-  padding: 2.5rem;
-}
-
-/*.main_nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-*/
 
 header nav ul {
   list-style-type: none;
@@ -106,30 +119,32 @@ header nav ul li {
 
 header a {
   text-decoration: none;
-  color: rgb(249, 244, 239);
+  color: var(--creamwhite);
+}
+
+header nav a {
+  background-color: transparent;
+  transition: font-size 0.3s;
+}
+
+header nav a:hover {
+  font-size: 2rem;
 }
 
 #hero-banner {
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#hero_banner h2 {
+#hero_banner h1 {
   font-size: 5rem;
-  color: rgb(33, 19, 25);
+  color: var(--darkbrown);
   text-align: center;
   text-transform: uppercase;
-  font-family: "Indie Flower", cursive;
+  font-family: var(--highlightfont);
 }
-
-/*.coloroverlay::before {
-  width: 100%;
-  background: rgb(255, 199, 158);
-  opacity: 0.7;
-  position: absolute;
-}*/
 
 /************ Main area ************/
 #work,
@@ -137,6 +152,7 @@ header a {
 #skills {
   padding: 50px;
   min-height: 500px;
+  scroll-margin-top: 5rem;
 }
 
 #work .work_boxes {
@@ -145,15 +161,15 @@ header a {
 }
 
 #work .box {
-  background-color: rgb(33, 19, 25);
+  background-color: var(--darkbrown);
   width: 32%;
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgb(161, 92, 42);
+  border: 1px solid var(--cognacbrown);
 }
 
 #work .box:hover {
-  box-shadow: 0 0 25px rgb(161, 92, 42);
+  box-shadow: 0 0 25px var(--cognacbrown);
 }
 
 #work .box h3 {
@@ -169,20 +185,20 @@ header a {
 
 /* unvisited link */
 .box a:link {
-  color: rgb(249, 244, 239);
-  font-family: "Indie Flower", cursive;
+  color: var(--creamwhite);
+  font-family: var(--highlightfont);
   text-decoration: none;
 }
 
 /* visited link */
 .box a:visited {
-  color: rgb(255, 199, 158);
-  font-family: "Indie Flower", cursive;
+  color: var(--lightcoralish);
+  font-family: var(--highlightfont);
   text-decoration: none;
 }
 
 #experience {
-  background-color: rgb(33, 19, 25);
+  background-color: var(--darkbrown);
 }
 
 #experience img {
@@ -192,49 +208,96 @@ header a {
 
 #skills .skills_boxes {
   display: flex;
-  justify-content: space-between;
-}
-
-#skills .box {
-  background-color: rgb(33, 19, 25);
+  flex-wrap: wrap;
+  justify-content: space-around;
   text-align: center;
-  width: 32%;
-  padding: 1rem;
+  margin-top: 5rem;
+}
+
+.skill:nth-child(odd) {
+  background-color: var(--lightcoralish);
+}
+
+.skill {
+  background-color: var(--darkbrown);
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid var(--cognacbrown);
   border-radius: 5px;
-  box-shadow: 0 0 5px rgb(161, 92, 42);
+  box-shadow: 0 0 5px var(--cognacbrown);
 }
 
-#skills .box:nth-child(odd) {
-  background-color: rgb(255, 199, 158);
+.skill:hover {
+  box-shadow: 0 0 25px var(--cognacbrown);
 }
 
-#skills .box:hover {
-  box-shadow: 0 0 25px rgb(161, 92, 42);
-}
-
-i {
-  background-color: rgb(33, 19, 25);
-  color: rgb(161, 92, 42);
-  margin: 1rem;
-  font-size: 2rem;
-}
-
-progress {
-  width: 60%;
-  height: 30%;
+.skill i {
+  color: var(--cognacbrown);
 }
 
 progress[value] {
-  color: rgb(161, 92, 42);
-} /* IE10 */
-progress::-webkit-progress-bar-value {
-  background: rgb(161, 92, 42);
+  height: 15px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
 }
-progress::-webkit-progress-value {
-  background: rgb(161, 92, 42);
+
+progress[value]::-webkit-progress-bar {
+  background-color: var(--creamwhite);
+  border-radius: 15px;
+  box-shadow: 0 2px 5px var(--cognacbrown) inset;
 }
-progress::-moz-progress-bar {
-  background: rgb(161, 92, 42);
+progress[value]::-webkit-progress-value {
+  background: var(--cognacbrown);
+  border-radius: 15px;
+  background-size: 35px 20x, 100% 100%, 100% 100%;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "a a b b c c"
+    "a a d d c c"
+    "e h h h c c"
+    "f h h h i i"
+    "g h h h i i";
+  grid-gap: 0.5rem;
+}
+
+.grid-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item-1 {
+  grid-area: a;
+}
+.grid-item-2 {
+  grid-area: b;
+}
+.grid-item-3 {
+  grid-area: c;
+}
+.grid-item-4 {
+  grid-area: d;
+}
+.grid-item-5 {
+  grid-area: e;
+}
+.grid-item-6 {
+  grid-area: f;
+}
+.grid-item-7 {
+  grid-area: g;
+}
+.grid-item-8 {
+  grid-area: h;
+}
+.grid-item-9 {
+  grid-area: i;
 }
 
 /********** Footer area *************/
@@ -242,11 +305,11 @@ progress::-moz-progress-bar {
 footer {
   background: url("https://source.unsplash.com/CH-ZZW8cbac/1600x900") no-repeat
     fixed center center/cover;
-  background-color: rgb(255, 199, 158);
+  background-color: var(--lightcoralish);
   text-align: center;
-  color: rgb(33, 19, 25);
+  color: var(--darkbrown);
   padding: 8px;
-  font-family: "Indie Flower", cursive;
+  font-family: var(--highlightfont);
 }
 
 footer .copyright {
@@ -255,24 +318,20 @@ footer .copyright {
 }
 
 #myBtn {
-  background-color: rgb(33, 19, 25);
-  color: rgb(249, 244, 239);
+  background-color: var(--darkbrown);
+  color: var(--creamwhite);
   border-radius: 5px;
   border: none;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   font-size: 0.813em;
-  font-family: "Indie Flower", cursive;
+  font-family: var(--highlightfont);
 }
 
 #myBtn:hover {
-  background-color: rgb(161, 92, 42);
-}
-
-.material-icons {
-  font-size: 1rem;
+  background-color: var(--cognacbrown);
 }
 
 /********** Form area *************/
@@ -286,38 +345,73 @@ footer form {
   display: block;
   text-align: center;
   margin-bottom: 5px;
-  font-family: "Indie Flower", cursive;
+  font-family: var(--highlightfont);
 }
 
 .form-group input,
 .form-group textarea {
   width: 20%;
   padding: 0.5rem 1rem;
-  border: 1px solid rgb(33, 19, 25);
+  border: 1px solid var(--darkbrown);
   border-radius: 5px;
   font-size: 1rem;
-  font-family: "Oswald", sans-serif;
+  font-family: var(--basicfont);
 }
 
 footer form button {
-  background-color: rgb(33, 19, 25);
-  color: rgb(249, 244, 239);
+  background-color: var(--darkbrown);
+  color: var(--creamwhite);
   border: none;
   width: 8%;
   height: 4%;
   padding: 0.625em;
   border-radius: 5px;
   font-size: 0.813em;
-  font-family: "Indie Flower", cursive;
+  font-family: var(--highlightfont);
 }
 
 footer form button:hover {
-  background-color: rgb(161, 92, 42);
+  background-color: var(--cognacbrown);
+}
+
+.material-icons {
+  font-size: 1rem;
 }
 
 /**************** Tablet support ****************/
 
 @media (max-width: 899px) {
+  #mobileButton {
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
+
+  #mobileButton .material-icons {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav.responsive ul {
+    display: block;
+    background-color: var(--darkbrown);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 55px;
+  }
+
+  nav.responsive ul li {
+    display: block;
+  }
+
+  nav.responsive ul li a {
+    display: block;
+    padding: 1rem 2rem;
+  }
   #experience {
     display: block;
   }
@@ -343,52 +437,20 @@ footer form button:hover {
 
 /**************** Mobile support ****************/
 @media (max-width: 576px) {
-  #mobileButton {
-    display: block;
-    background-color: transparent;
-    border: none;
-  }
   .main_nav {
     display: block;
   }
-
   .main_nav ul {
-    display: none;
     margin-top: 1rem;
   }
-
   .main_nav ul li {
     padding: 1rem;
   }
-
-  .main_nav.responsive ul {
-    display: block;
-    background-color: rgb(33, 19, 25);
-    color: rgb(249, 244, 239);
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 86px;
-  }
-
-  .main_nav.responsive ul li {
-    display: block;
-  }
-
-  .main_nav.responsive ul li a {
-    display: block;
-    padding: 1rem 2rem;
-  }
-
-  #hero-banner h2 {
+  #hero-banner h1 {
     font-size: 2rem;
-    color: #333;
+    color: var(--darkbrown);
     text-align: center;
   }
-  #work .box h3 {
-    margin-bottom: 11rem;
-  }
-
   #work,
   #experience,
   #skills {
@@ -405,13 +467,6 @@ footer form button:hover {
     width: 100%;
     float: none;
     margin: 0;
-  }
-  #skills .skills_boxes {
-    display: block;
-  }
-  #skills .box {
-    width: 100%;
-    margin-bottom: 1rem;
   }
   footer form .form-group {
     display: block;
