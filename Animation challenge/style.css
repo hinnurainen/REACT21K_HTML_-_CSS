@@ -1,0 +1,230 @@
+:root {
+  --element-color: radial-gradient(rgb(8, 150, 114) rgb(50, 252, 208));
+  --element-hover: radial-gradient(rgb(77, 63, 63) black);
+  --background-color: linear-gradient(to top, orange, yellow);
+}
+
+body {
+  background: var(--background-color);
+  margin: 3rem;
+}
+
+body {
+  background: linear-gradient(-45deg, orange, yellow);
+  background-size: 200%;
+  background-attachment: fixed;
+  background-repeat: no repeat;
+  animation: gradient 15s ease infinite;
+}
+
+section {
+  position: relative;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.first-task {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  transition: all 1s;
+}
+
+.first-task:hover {
+  background: pink;
+  transform: scale(1.5);
+}
+
+.second-task {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  transition: all 2s;
+}
+
+.second-task:hover {
+  background-color: pink;
+  transform: rotate(180deg);
+}
+
+.third-task {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  padding: 1rem;
+  transition: all 1s;
+}
+
+.third-task:hover {
+  transform: scale(0.5);
+}
+
+.third-task p {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.third-task:hover p {
+  opacity: 1;
+}
+
+.fourth-task {
+  display: inline-block;
+}
+
+.fourth-task h3::after {
+  content: "";
+  margin-top: 5px;
+  height: 2px;
+  width: 0;
+  display: block;
+  background-color: rgb(77, 63, 63);
+  transition: 1s ease-in all;
+}
+
+.fourth-task:hover h3::after {
+  width: 100%;
+}
+
+.fifth-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  background: white;
+  text-align: center;
+}
+
+/* Top side */
+
+.fift-task::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 200px;
+  border-top: 5px solid #333;
+  transition: all 1s;
+}
+
+.fift-task:hover::before {
+  right: 0;
+}
+
+/* Right side */
+
+.fifth-task::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-right: 5px solid #333;
+  transition: all 1s;
+}
+
+.fifth-task:hover::after {
+  top: 0;
+}
+
+/* Bottom side */
+
+.fift-task h3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 200px;
+  right: 0;
+  border-bottom: 5px solid #333;
+  transition: all 1s;
+}
+
+.fift-task:hover h3::before {
+  left: 0;
+}
+
+/* Left side */
+
+.fift-task h3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 200px;
+  left: 0;
+  right: 0;
+  border-left: 5px solid #333;
+  transition: all 1s;
+}
+
+.fift-task:hover h3::after {
+  bottom: 0;
+}
+
+.animated-circle {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  box-shadow: 0 0 5px #333;
+  z-index: 1;
+  animation-name: wow;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-iteration-count: 3;
+  text-align: center;
+}
+
+@keyframes wow {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    background: green;
+    top: 0;
+    left: 300px;
+  }
+  50% {
+    background: yellow;
+    top: 300px;
+    left: 300px;
+    border-radius: 2px;
+  }
+  75% {
+    background: pink;
+    top: 300px;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+.animated-circle:hover {
+  animation-play-state: paused;
+}
