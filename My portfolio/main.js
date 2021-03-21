@@ -1,8 +1,10 @@
 let header = document.querySelector(".main_nav");
-let buttonToTop = document.getElementById("myBtn");
+let buttonToTop = document.getElementById("topBtn");
 let buttonMobile = document.getElementById("mobileButton");
 let nav = document.querySelector("nav");
 let links = document.querySelectorAll("nav ul li a");
+let logo = document.getElementById("logo");
+let logoSound;
 
 window.onscroll = function () {
   scrollFunction();
@@ -38,5 +40,41 @@ const mobMenu = () => {
   }
 };
 
+const logoFunction = () => {
+  logoSound = new sound('./Sheep-Lamp-Bleat-A-www.fesliyanstudios.com.mp3');
+  logoSound.play();
+}
+
 buttonToTop.addEventListener("click", getToTop);
 buttonMobile.addEventListener("click", mobMenu);
+logo.addEventListener("click", logoFunction);
+
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function () {
+    this.sound.play();
+  }
+  this.stop = function () {
+    this.sound.pause();
+  }
+}
+
+var i = 0;
+var txt = 'Welcome to my portfolio'; /* The text */
+var speed = 150; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("bannertext").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+typeWriter();
+
