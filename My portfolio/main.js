@@ -6,6 +6,10 @@ let links = document.querySelectorAll("nav ul li a");
 let logo = document.getElementById("logo");
 let logoSound;
 
+window.onload = function () {
+  logoFunction();
+}
+
 window.onscroll = function () {
   scrollFunction();
 };
@@ -64,9 +68,9 @@ function sound(src) {
   }
 }
 
-var i = 0;
-var txt = 'Welcome to my portfolio'; /* The text */
-var speed = 150; /* The speed/duration of the effect in milliseconds */
+let i = 0;
+let txt = 'Welcome to my portfolio';
+let speed = 150;
 
 function typeWriter() {
   if (i < txt.length) {
@@ -76,5 +80,7 @@ function typeWriter() {
   }
 }
 
-typeWriter();
+if (window.location.pathname === '/index.html') {
+  typeWriter();
+}
 

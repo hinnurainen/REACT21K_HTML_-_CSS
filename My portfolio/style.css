@@ -391,9 +391,10 @@ footer .copyright {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   font-size: 0.813em;
   font-family: var(--highlightfont);
+  cursor: pointer;
 }
 
 #topBtn:hover {
@@ -454,7 +455,7 @@ footer form button:hover {
   }
 
   #mobileButton .material-icons {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   nav ul {
@@ -478,11 +479,22 @@ footer form button:hover {
     display: block;
     padding: 1rem 2rem;
   }
+  #hero_banner h1 {
+    font-size: 4rem;
+  }
   #experience {
     display: block;
   }
   #experience img {
     width: 100%;
+  }
+  .skills_boxes {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .skill {
+    width: 100%;
+    margin-bottom: 30px;
   }
   footer form {
     width: 80%;
@@ -512,10 +524,11 @@ footer form button:hover {
   .main_nav ul li {
     padding: 1rem;
   }
-  #hero-banner h1 {
-    font-size: 2rem;
-    color: var(--darkbrown);
-    text-align: center;
+  #bannertext {
+    font-size: 4rem;
+  }
+  #hero_banner h1 {
+    font-size: 4rem;
   }
   #work,
   #experience,
@@ -533,6 +546,9 @@ footer form button:hover {
     width: 100%;
     float: none;
     margin: 0;
+  }
+  .gallery-grid {
+    display: block;
   }
   footer form .form-group {
     display: block;
