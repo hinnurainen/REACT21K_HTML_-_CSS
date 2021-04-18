@@ -1,38 +1,32 @@
 <?php
-    echo '<pre>';
-    print_r($_POST);
-    echo'<pre>';
 
-    if(isset($POST['email']) && $_POST['email'] != '') {
+// echo '<pre>';
+// print_r($_POST);
+// echo '<pre>';
 
-        if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) )
+if (isset($_POST['email']) && $_POST['email'] != '' ) {
 
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-        $to="heidi.maattanen@gmail.com";
-        $body = "";
+    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) 
 
-        $body .= "From: " .$name. "\r\n";
-        $body .= "Email: " .$email. "\r\n";
-        $body .= "Message: " .$message. "\r\n";
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
 
-        $sent_status=mail($to, $body);
+    $to = 'heidi.maattanen@edu.bc.fi';
+    $subject = 'User ' . $_POST['name'] . ' with email ' . $_POST['email'] . ' has sent a message.';
+    $body = "";
 
-        if ($sent_status) {
-            echo 'Message was delivered';
-        } else {
-            echo 'Email was not sent, check your email address.';
-        }
-    }
+    $body .= "From: " .$name. "\r\n";
+    $body .= "Email: " .$email. "\r\n";
+    $body .= "Message: " .$message. "\r\n";
 
-    /* $to="heidi.maattanen@gmail.com";
+    $success = mail($to, $subject, $body);
 
-    $sent_status = mail($to, $_POST['email'], 'Sent from my portfolio page', $_POST['name'], $_POST['message']);
-
-    if ($sent_status) {
-        echo 'Message was delivered';
+    if (!$success) {
+        echo 'Error, message was not sent.';
     } else {
-        echo 'Email was not sent, check your email address.';
-    } */
+        echo 'Email was successfully sent.';
+    }
+}
+
 ?>
